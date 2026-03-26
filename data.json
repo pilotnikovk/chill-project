@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "MILANO LUXE",
+    "price": "185,000",
+    "image": "https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800&q=80"
+  },
+  {
+    "id": 2,
+    "name": "TORINO SOFT",
+    "price": "142,000",
+    "image": "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=800&q=80"
+  },
+  {
+    "id": 3,
+    "name": "ROMA VELVET",
+    "price": "210,000",
+    "image": "https://images.unsplash.com/photo-1550254478-ead40cd82477?w=800&q=80"
+  }
+]

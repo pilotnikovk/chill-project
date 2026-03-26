@@ -9,7 +9,6 @@
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #FAFAFA; color: #1A1A1A; scroll-behavior: smooth; }
         .selection-orange::selection { background-color: #FED7AA; }
-        . Chili-gradient { background: linear-gradient(135deg, #FF6B00 0%, #FF4D00 100%); }
     </style>
 </head>
 <body class="overflow-x-hidden selection-orange">
@@ -22,7 +21,6 @@
             <div class="hidden md:flex gap-10 font-bold text-sm uppercase tracking-widest text-neutral-500">
                 <a href="#production" class="hover:text-black transition-colors">Производство</a>
                 <a href="#collection" class="hover:text-black transition-colors">Коллекция</a>
-                <a href="#delivery" class="hover:text-black transition-colors">Доставка</a>
                 <a href="#contacts" class="hover:text-black transition-colors">Контакты</a>
             </div>
             <a href="https://t.me/Tanya_Boyko18" class="bg-[#1A1A1A] text-white px-8 py-4 rounded-2xl font-bold hover:scale-105 transition-transform active:scale-95 shadow-xl">
@@ -32,7 +30,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative pt-48 pb-32 px-8 overflow-hidden">
+    <section id="hero" class="relative pt-48 pb-32 px-8 overflow-hidden">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
             <div class="relative z-10">
                 <div class="inline-block px-4 py-1.5 mb-8 rounded-full border border-orange-500/20 bg-orange-500/5 text-[10px] font-black uppercase tracking-[0.3em] text-[#FF6B00]">Скидка 5% по промокоду</div>
@@ -70,35 +68,40 @@
                 Наше производство <br/> <span class="text-neutral-500">Фабрика «Древпром»</span>
             </h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-                <div class="space-y-4">
-                    <div class="text-orange-500 font-bold text-lg">26+ ЛЕТ ОПЫТА</div>
+                <div class="p-8 border-l-2 border-orange-500/30">
+                    <div class="text-orange-500 font-bold text-lg mb-4">26+ ЛЕТ ОПЫТА</div>
                     <p class="text-neutral-400 font-light">Работаем на рынке более четверти века и знаем, как создавать надежную мебель.</p>
                 </div>
-                <div class="space-y-4">
-                    <div class="text-orange-500 font-bold text-lg">БЕЗ ПОСРЕДНИКОВ</div>
+                <div class="p-8 border-l-2 border-orange-500/30">
+                    <div class="text-orange-500 font-bold text-lg mb-4">БЕЗ ПОСРЕДНИКОВ</div>
                     <p class="text-neutral-400 font-light">Прямые доставки с фабрики: снижаем цену и исключаем ошибки при заказе.</p>
                 </div>
-                <div class="space-y-4">
-                    <div class="text-orange-500 font-bold text-lg">ГАРАНТИЯ 18 МЕСЯЦЕВ</div>
+                <div class="p-8 border-l-2 border-orange-500/30">
+                    <div class="text-orange-500 font-bold text-lg mb-4">ГАРАНТИЯ 18 МЕСЯЦЕВ</div>
                     <p class="text-neutral-400 font-light">Берем на себя все обязательства, работая только с сертифицированными материалами.</p>
-                </div>
-                <div class="space-y-4">
-                    <div class="text-orange-500 font-bold text-lg">ИНДИВИДУАЛЬНЫЕ РАЗМЕРЫ</div>
-                    <p class="text-neutral-400 font-light">Изготовим мебель точно под ваши требования и габариты помещения.</p>
-                </div>
-                <div class="space-y-4">
-                    <div class="text-orange-500 font-bold text-lg">ВЫЕЗДНОЙ ДИЗАЙНЕР</div>
-                    <p class="text-neutral-400 font-light">Наш специалист привезет образцы тканей прямо к вам домой.</p>
-                </div>
-                <div class="space-y-4">
-                    <div class="text-orange-500 font-bold text-lg">ДОСТУПНЫЕ ЦЕНЫ</div>
-                    <p class="text-neutral-400 font-light">Оптимальные расценки, чтобы качество было доступно каждому.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Order Form Section (Smart Form) -->
+    <!-- Collection Section -->
+    <section id="collection" class="py-32 px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-baseline justify-between mb-20">
+                <h2 class="text-5xl font-extrabold tracking-tight">
+                    Коллекция 2026<span class="text-[#FF6B00]">.</span>
+                </h2>
+                <div class="text-neutral-400 font-bold uppercase tracking-widest text-sm">CHILI PREMIUM</div>
+            </div>
+            
+            <div id="sofaCollection" class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 text-center md:text-left">
+                <!-- Data will be loaded via script -->
+                <div class="col-span-full py-20 text-neutral-400 font-bold uppercase tracking-widest animate-pulse">Загрузка коллекции...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
     <section id="orderForm" class="py-32 px-8">
         <div class="max-w-5xl mx-auto bg-white rounded-[3rem] p-12 md:p-20 shadow-[0_40px_100px_-20px_rgba(0,0,0,0.1)] border border-neutral-100 relative overflow-hidden">
             <div class="absolute top-0 right-0 w-64 h-64 bg-orange-500/5 blur-[100px] rounded-full"></div>
@@ -107,57 +110,62 @@
                 <p class="text-xl text-neutral-500 mb-12 font-light">Напишите нам — мы смоделируем интерьер и подберем идеальные ткани.</p>
                 
                 <form class="grid md:grid-cols-2 gap-8">
-                    <div class="space-y-2">
-                        <label class="text-xs font-bold uppercase tracking-widest text-neutral-400 ml-2">Ваше имя</label>
-                        <input type="text" placeholder="Александр" class="w-full px-8 py-5 rounded-2xl bg-neutral-50 border-2 border-transparent focus:border-orange-500 focus:bg-white outline-none transition-all font-bold" />
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-xs font-bold uppercase tracking-widest text-neutral-400 ml-2">Телефон</label>
-                        <input type="tel" placeholder="+7 (999) 000-00-00" class="w-full px-8 py-5 rounded-2xl bg-neutral-50 border-2 border-transparent focus:border-orange-500 focus:bg-white outline-none transition-all font-bold" />
-                    </div>
-                    <div class="md:col-span-2 space-y-2">
-                        <label class="text-xs font-bold uppercase tracking-widest text-neutral-400 ml-2">Что вас интересует?</label>
-                        <select class="w-full px-8 py-5 rounded-2xl bg-neutral-50 border-2 border-transparent focus:border-orange-500 focus:bg-white outline-none transition-all font-bold appearance-none">
-                            <option>Консультация Татьяны Бойко</option>
-                            <option>Выезд дизайнера с образцами</option>
-                            <option>Расчет по индивидуальным размерам</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="md:col-span-2 w-full py-6 bg-[#1A1A1A] text-white font-black rounded-2xl text-sm uppercase tracking-widest hover:bg-orange-600 transition-colors shadow-2xl">
-                        Отправить запрос
-                    </button>
+                    <input type="text" placeholder="Ваше имя" class="px-8 py-5 rounded-2xl bg-neutral-50 border-2 border-transparent focus:border-orange-500 focus:bg-white outline-none transition-all font-bold" />
+                    <input type="tel" placeholder="+7 (___) ___-__-__" class="px-8 py-5 rounded-2xl bg-neutral-50 border-2 border-transparent focus:border-orange-500 focus:bg-white outline-none transition-all font-bold" />
+                    <select class="md:col-span-2 px-8 py-5 rounded-2xl bg-neutral-50 border-2 border-transparent focus:border-orange-500 focus:bg-white outline-none transition-all font-bold">
+                        <option>Консультация Татьяны Бойко</option>
+                        <option>Выезд дизайнера с образцами</option>
+                        <option>Расчет по индивидуальным размерам</option>
+                    </select>
+                    <button type="submit" class="md:col-span-2 py-6 bg-[#1A1A1A] text-white font-black rounded-2xl text-sm uppercase tracking-widest hover:bg-orange-600 transition-colors shadow-2xl">Отправить запрос</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer / Contacts -->
-    <footer id="contacts" class="py-24 bg-white border-t border-neutral-100 px-8">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-3 gap-16 mb-16">
-            <div class="text-2xl font-extrabold text-black mb-4 uppercase italic">
-                ЧИЛЛ<span class="text-[#FF6B00]">.</span>
+    <!-- Footer -->
+    <footer id="contacts" class="py-24 bg-white border-t border-neutral-100 px-8 text-center md:text-left">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-16">
+            <div>
+                <div class="text-4xl font-extrabold tracking-tighter mb-8 uppercase italic">ЧИЛЛ<span class="text-[#FF6B00]">.</span></div>
+                <p class="text-neutral-400 font-light leading-relaxed">Фабричное качество «Древпром» по честным ценам в Санкт-Петербурге.</p>
             </div>
-                <div class="space-y-6">
-                    <h4 class="font-bold uppercase tracking-widest text-xs text-neutral-400">Контакты</h4>
-                    <div class="text-lg font-bold">8 933 567 7737</div>
-                    <div class="text-neutral-500">@Tanya_Boyko18</div>
-                    <div class="text-neutral-500">sasha260478@yandex.ru</div>
-                </div>
-                <div class="space-y-6">
-                    <h4 class="font-bold uppercase tracking-widest text-xs text-neutral-400">Где мы?</h4>
-                    <div class="text-neutral-500 leading-relaxed">
-                        МЦ « 12 стульев», 2 этаж, секция В3<br/>
-                        Г. Санкт-Петербург, ул. Балканская, 17<br/>
-                        Ежедневно с 11:00 до 21:00
-                    </div>
-                </div>
+            <div class="space-y-4">
+                <h4 class="font-bold uppercase tracking-widest text-xs text-neutral-400">Контакты</h4>
+                <div class="text-lg font-bold">8 933 567 7737</div>
+                <div class="text-neutral-500 font-medium">@Tanya_Boyko18</div>
             </div>
-            <div class="pt-12 border-t border-neutral-50 text-center text-neutral-300 text-xs font-bold uppercase tracking-widest">
-                © 2026 Фабрика «Древпром». Диваны с перчинкой.
+            <div class="space-y-4">
+                <h4 class="font-bold uppercase tracking-widest text-xs text-neutral-400">Шоурум</h4>
+                <p class="text-neutral-500 font-medium">МЦ « 12 стульев», секция В3<br/>СПб, ул. Балканская, 17</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        async function loadCollection() {
+            try {
+                const res = await fetch('data.json');
+                const data = await res.json();
+                const list = document.getElementById('sofaCollection');
+                list.innerHTML = data.map(item => `
+                    <div class="group cursor-pointer">
+                        <div class="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden mb-8 shadow-lg bg-neutral-200">
+                            <img src="${item.image}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" />
+                            <div class="absolute bottom-8 left-8 right-8">
+                                <button onclick="window.Beacon('open')" class="w-full py-5 bg-white text-black font-bold rounded-2xl shadow-2xl opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 uppercase text-xs tracking-widest">
+                                    Узнать цену
+                                </button>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2 uppercase tracking-tighter">${item.name}</h3>
+                        <div class="text-neutral-400 font-medium">от ${item.price} ₽</div>
+                    </div>
+                `).join('');
+            } catch (e) { console.error('Error loading data', e); }
+        }
+        loadCollection();
+    </script>
 
     <!-- Chat Widget -->
     <script type="text/javascript">!function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],t.readyState==="complete")return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});</script>
